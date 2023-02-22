@@ -67,6 +67,9 @@ button{
 button:hover{
     color: #aeaeae;
 }
+button:active{
+    color: #707070;
+}
 @media screen and (max-width:650px) {
     button{
         position: absolute;
