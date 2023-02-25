@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <link rel="stylesheet" href="./dist/css/eccomerce_a.min.css" />
+  </head>
+  <body>
+    <header>
+      <h1><img src="./assets/logo.svg" alt="" /></h1>
+      <nav>
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <button id="cartToggle">
+        <img src="./assets/icon-cart.svg" alt="" />
+      </button>
+      <div id="cart">
+        <p>Your cart is empty.</p>
+      </div>
+      <div class="avatar"><img src="./assets/image-avatar.png" alt="" /></div>
+    </header>
+    <section id="product">
+      <div id="gallery">
+        <div class="main-img">
+          <img src="./assets/image-product-1.jpg" alt="" />
+        </div>
+        <div class="thumbnails">
+          <div class="alt-img">
+            <img src="./assets/image-product-1-thumbnail.jpg" alt="" />
+          </div>
+          <div class="alt-img">
+            <img src="./assets/image-product-2-thumbnail.jpg" alt="" />
+          </div>
+          <div class="alt-img">
+            <img src="./assets/image-product-3-thumbnail.jpg" alt="" />
+          </div>
+          <div class="alt-img">
+            <img src="./assets/image-product-4-thumbnail.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="wrap">
+        <small>Sneaker Company</small>
+        <h2>Fall Limited Edition Sneakers</h2>
+        <p class="description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <p class="price">$125.00<span class="discount">50%</span></p>
+      </div>
+      <p class="oprice">$250.00</p>
+      <form action="">
+        <label for="num" id="minus"
+          ><img src="./assets/icon-minus.svg" alt=""
+        /></label>
+        <input type="number" name="num" id="num" value="0" min="0" max="10" />
+        <label for="num" id="plus"
+          ><img src="./assets/icon-plus.svg" alt=""
+        /></label>
+        <input type="submit" value="Add to cart" />
+      </form>
+    </section>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

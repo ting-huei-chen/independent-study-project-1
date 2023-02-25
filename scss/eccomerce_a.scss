@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+// Pimary color
+$Orange: hsl(26, 100%, 55%);
+$Paleorange: hsl(25, 100%, 94%);
+// Neutral
+$Verydarkblue: hsl(220, 13%, 13%);
+$Darkgrayishblue: hsl(219, 9%, 45%);
+$Grayishblue: hsl(220, 14%, 75%);
+$Lightgrayishblue: hsl(223, 64%, 98%);
+$White: hsl(0, 0%, 100%);
+// (with 75% opacity for lightbox background)
+$Black: hsl(0, 0%, 0%);
+$bodycopy:16px;
+$font:'Kumbh Sans', Arial,sans-serif;
+// Break point
+$Mobile: 375px;
+$Desktop: 1440px;
+$radius:(
+    "small":5px,
+    "regular":15px,
+    "medium":2rem,
+    "round":50%
+);
+$weight:(
+    "regular":400,
+    "bold":700
+);
+// btns
+// label{
+//     width: 20px;
+//     height: 10px;
+// }
+// #minus{
+//     background: url(../assets/icon-minus.svg);
+// }
+// frontend mentor attribution
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
