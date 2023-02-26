@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+:root{
+    --base-color: #20262E;
+    --medium-color: #4d5868;
+    --theme-color:#5D3891;
+    --highlight-color:#8c3ff8;
+    --light-color: #e9ebef;
+    --breakpoint-tablet: 870px;
+    --narrow: 800px;
+    --breakpoint-laptop:1200px;
+    --radius-small:5px;
+    --radius-regular:15px;
+}
+*{
+    box-sizing: border-box;
+    /* outline: solid 1px coral; */
+}
+html,a{
+    font-family: 'Roboto',Arial, sans-serif;
+}
+h1{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 3rem;
+    margin: .75rem 0 .75rem 0;
+}
