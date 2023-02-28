@@ -12,11 +12,7 @@ function initMultiStepForm() {
     const prevButtons = document.querySelectorAll(".prev");
     const stepsNumber = pages.length;
 
-    if (progressNumber !== stepsNumber) {
-        console.warn(
-            "Error, number of steps in progress bar do not match number of pages"
-        );
-    }
+ 
 
     document.documentElement.style.setProperty("--stepNumber", stepsNumber);
 
@@ -62,10 +58,7 @@ function initMultiStepForm() {
         progressCheck[current - 1].classList.add("active");
         progressText[current - 1].classList.add("active");
         current += 1;
-        // setTimeout(function () {
-        //     alert("Your Form Successfully Signed up");
-        //     location.reload();
-        // }, 800);
+        
     });
 
     function validateInputs(ths) {
@@ -74,7 +67,12 @@ function initMultiStepForm() {
         const inputs =
             ths.parentElement.parentElement.querySelectorAll("input");
         for (let i = 0; i < inputs.length; i++) {
+            const check =inputs[i].getAttribute("name");
             const valid = inputs[i].checkValidity();
+            if(check==="diet" ||check==="allergies" || check ==="preference"){
+                
+                ths.parentElement.parentElement.querySelector("input:checked") === null ? inputsValid=false :  inputsValid=true;
+            }
             if (!valid) {
                 inputsValid = false;
                 inputs[i].classList.add("invalid-input");
@@ -82,6 +80,7 @@ function initMultiStepForm() {
                 inputs[i].classList.remove("invalid-input");
             }
         }
+
         return inputsValid;
     }
 }
