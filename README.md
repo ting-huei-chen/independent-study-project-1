@@ -4,7 +4,7 @@
 ## Links
 
 | **Projects Demo** | **Content** | **Stack** |
-|-----------|:-------------:|
+|-----------|:-------------:|:-------------:|
 |[Material Buttons](https://ting-huei-chen.github.io/independent-study-project-1/button-material.html)|Material buttons sets|HTML CSS|
 |[Buttons Hover Effect](https://ting-huei-chen.github.io/independent-study-project-1/button.html)|Buttons sets with animations|HTML SASS|
 |[Carousel A](https://ting-huei-chen.github.io/independent-study-project-1/carousel-type-a.html)|Image carousel|HTML CSS JavaScript|
