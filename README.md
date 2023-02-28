@@ -10,7 +10,7 @@
 |[Carousel A](https://ting-huei-chen.github.io/independent-study-project-1/carousel-type-a.html)|Image carousel|HTML CSS JavaScript|
 |[Carousel B](https://ting-huei-chen.github.io/independent-study-project-1/carousel-type-b.html)|Swipeable image carousel|HTML CSS BootStrap|
 |[E-commerce Product Page A](https://ting-huei-chen.github.io/independent-study-project-1/eccomerce-type-a.html)|E-commerce Product Page A|HTML SASS JavaScript|
-|[E-commerce Product Page B](https://ting-huei-chen.github.io/independent-study-project-1/eccomerce-type-b.html)|E-commerce Product Page A|HTML CSS JavaScript|
+|[E-commerce Product Page B](https://ting-huei-chen.github.io/independent-study-project-1/ecommerce-type-b.html)|E-commerce Product Page A|HTML CSS JavaScript|
 |[Card Components A](https://ting-huei-chen.github.io/independent-study-project-1/interactive-card-component-type-a.html)|Drag and drop card comopnents|HTML CSS JavaScript|
 |[Card Components B](https://ting-huei-chen.github.io/independent-study-project-1/profile-card.html)|User profile card|HTML CSS|
 |[Login Component A](https://ting-huei-chen.github.io/independent-study-project-1/login-type-a.html)|Login Component A|HTML CSS|
