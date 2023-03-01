@@ -3,7 +3,7 @@
 
 ## Links
 
-| **Projects Demo** | **Content** | **Stack** |
+| **Demo** | **Content** | **Stack** |
 |-----------|:-------------:|:-------------:|
 |[Material Buttons](https://ting-huei-chen.github.io/independent-study-project-1/button-material.html)|Material buttons sets|HTML CSS|
 |[Buttons Hover Effect](https://ting-huei-chen.github.io/independent-study-project-1/button.html)|Interactive buttons sets with hover effect|HTML SASS|
