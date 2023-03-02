@@ -272,7 +272,7 @@ form .page .btns button.prev:hover {
 
 @media screen and (max-width: 660px) {
     :root {
-        --containerWidth: 400px;
+        --containerWidth: 100%;
     }
     .progress-bar .step p {
         display: none;
@@ -301,11 +301,13 @@ form .page .btns button.prev:hover {
     }
 }
 @media screen and (max-width: 500px) {
-    :root {
-        --containerWidth: 100%;
+    body{
+        background-color: #fff;
     }
     .container {
-        box-sizing: border-box;
-        border-radius: 0;
+        padding: 1rem 2rem;
+    }
+    .page{
+        margin: 1rem;
     }
 }
