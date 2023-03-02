@@ -1,99 +1,131 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-}
+
+/* Global styles */
 :root {
-    --primary: #183A1D;
-    --secondary: #698269;
-    --errorColor: rgb(244, 94, 94);
-    --stepNumber: 6;
-    --containerWidth: 600px;
-    --bgColor: #183A1D;
-    --inputBorderColor: #e1dfcf;
-    --highlight:#F0A04B;
+  /* Color variables */
+  --primary: #183A1D;
+  --secondary: #698269;
+  --errorColor: rgb(244, 94, 94);
+  --highlight: #F0A04B;
+  
+  /* General variables */
+  --stepNumber: 6;
+  --containerWidth: 600px;
+  --bgColor: #183A1D;
+  --inputBorderColor: #e1dfcf;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
 body {
-    font-family: 'Manrope',Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    overflow-x: hidden;
-    background: var(--bgColor);
+  font-family: 'Manrope', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--bgColor);
 }
+
+/* Text selection styles */
 ::selection {
-    color: #fff;
-    background: var(--primary);
+  color: #fff;
+  background: var(--primary);
 }
+
+/* Container styles */
 .container {
-    width: var(--containerWidth);
-    background: #fff;
-    text-align: center;
-    border-radius: 2rem;
-    padding: 50px 35px 10px 35px;
+  width: var(--containerWidth);
+  background: #fff;
+  text-align: center;
+  border-radius: 2rem;
+  padding: 2.5rem 3rem 1rem;
 }
-.container header {
-    font-size: 35px;
-    font-weight: 600;
-    margin: 0 0 30px 0;
+
+header {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
 }
+
+/* Form styles */
 .container .form-outer {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
+
 .container .form-outer form {
-    display: flex;
-    width: calc(100% * var(--stepNumber));
+  display: flex;
+  width: calc(100% * var(--stepNumber));
 }
+
 .form-outer form .page {
-    width: calc(100% / var(--stepNumber));
-    transition: margin-left 0.3s ease-in-out;
+  width: calc(100% / var(--stepNumber));
+  transition: margin-left 0.3s ease-in-out;
 }
+
 .form-outer form .page .title {
-    text-align: left;
-    font-size: 25px;
-    font-weight: 500;
+  text-align: left;
+  font-size: larger;
+  font-weight: 500;
 }
-.form-outer form .page .field {
-    width: var(--containerWidth);
-    height: 45px;
-    margin: 45px 0;
-    display: flex;
-    position: relative;
+.field {
+  width: var(--containerWidth);
+  height: 3rem;
+  margin: 3rem 0;
+  display: flex;
+  position: relative;
 }
-.field.wrap{
-    flex-wrap: wrap;
-    height: unset !important;
+
+.field.wrap {
+  flex-wrap: wrap;
+  height: unset !important;
 }
+.delivery .field:not(.btns){
+  display:block;
+}
+.delivery .field.btns button{
+    margin-top: 1rem;
+}
+
 form .page .field .label {
-    position: absolute;
-    top: -30px;
-    font-weight: 500;
+  text-align:left;
+  display:block;
+  font-weight: 500;
+}
+input[type=text]{
+  display:block;
 }
 form .page .field input {
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    border: 1px solid var(--inputBorderColor);
-    border-radius: 5px;
-    padding-left: 15px;
-    margin: 0 1px;
-    font-size: 18px;
-    transition: border-color 150ms ease;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--inputBorderColor);
+  border-radius: 5px;
+  padding-left: 1rem;
+  margin: 0;
+  transition: border-color 150ms ease;
 }
+
 form .page .field input.invalid-input {
-    border-color: var(--errorColor);
+  border-color: var(--errorColor);
 }
-input[type=radio],input[type=checkbox]{
-    display: none;
+
+input[type=radio],
+input[type=checkbox] {
+  display: none;
 }
-input[type=radio]:checked+label, input[type=checkbox]:checked+label{
-    color: var(--inputBorderColor);
-    outline: solid 2px var(--primary);
-    background-color: var(--primary);
+
+input[type=radio]:checked + label,
+input[type=checkbox]:checked + label {
+  color: var(--inputBorderColor);
+  outline: solid 2px var(--primary);
+  background-color: var(--primary);
 }
 
 .chip{
@@ -109,22 +141,16 @@ input[type=radio]:checked+label, input[type=checkbox]:checked+label{
     background-color: var(--secondary);
     color: var(--inputBorderColor);
 }
-form .page .field select {
-    width: 100%;
-    padding-left: 10px;
-    font-size: 17px;
-    font-weight: 500;
-}
+
 form .page .field button,form .page .field input[type=submit] {
     width: 100%;
     height: calc(100% + 5px);
     border: none;
     background: var(--primary);
-    margin-top: -20px;
     border-radius: 2rem;
     color: #fff;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -133,39 +159,41 @@ form .page .field button,form .page .field input[type=submit] {
 form .page .field button:hover {
     background: #000;
 }
-form .page .btns button {
-    margin-top: -20px !important;
-}
+
 form .page .btns button.prev {
     background-color: unset;
     outline: solid 1.5px var(--primary);
     color: var(--primary);
-    margin-right: 3px;
-    font-size: 17px;
+    margin-right: .5rem;
+    font-size: 1rem;
 }
-form .page .btns button.prev:hover{
+form .page .btns button.prev:hover {
     background-color: var(--secondary);
-}
-form .page .btns button.next {
-    margin-left: 3px;
-}
-.container .progress-bar {
+  }
+  
+  form .page .btns button.next {
+    margin-left: 0.5rem;
+  }
+  
+  .container .progress-bar {
     display: flex;
     margin: 40px 0;
     user-select: none;
-}
-.container .progress-bar .step {
+  }
+  
+  .container .progress-bar .step {
     text-align: center;
     width: 100%;
     position: relative;
-}
-.container .progress-bar .step p {
+  }
+  
+  .container .progress-bar .step p {
     font-weight: 500;
-    font-size: 18px;
-    color: #000;
-    margin-bottom: 8px;
-}
-.progress-bar .step .bullet {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+ .bullet {
     height: 25px;
     width: 25px;
     border: 2px solid #000;
@@ -174,62 +202,73 @@ form .page .btns button.next {
     position: relative;
     transition: 0.2s;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 1rem;
     line-height: 25px;
-}
-.progress-bar .step .bullet.active {
+  }
+  
+  .progress-bar .step .bullet.active {
     border-color: var(--highlight);
     background: var(--highlight);
-}
-.progress-bar .step .bullet span {
+  }
+  
+  .progress-bar .step .bullet span {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-}
-.progress-bar .step .bullet.active span {
+  }
+  
+  .progress-bar .step .bullet.active span {
     display: none;
-}
-.progress-bar .step .bullet:before,
-.progress-bar .step .bullet:after {
+  }
+  
+  .progress-bar .step .bullet:before,
+  .progress-bar .step .bullet:after {
     position: absolute;
     content: "";
-    bottom: 11px;
+    bottom: 10px;
     right: -71px;
     height: 3px;
     width: 55px;
-    background: #262626;
-}
-.progress-bar .step .bullet.active:after {
+    background-color: #000;
+  }
+  
+  .progress-bar .step .bullet.active:after {
     background: var(--highlight);
     transform: scaleX(0);
     transform-origin: left;
     animation: animate 0.3s linear forwards;
-}
-@keyframes animate {
+  }
+  
+  @keyframes animate {
     100% {
-        transform: scaleX(1);
+      transform: scaleX(1);
     }
-}
-.progress-bar .step:last-child .bullet:before,
-.progress-bar .step:last-child .bullet:after {
+  }
+  
+  .progress-bar .step:last-child .bullet:before,
+  .progress-bar .step:last-child .bullet:after {
     display: none;
-}
-.progress-bar .step p.active {
+  }
+  
+  .progress-bar .step p.active {
     color: var(--highlight);
     transition: 0.2s linear;
-}
-.progress-bar .step .check {
+  }
+  
+  .progress-bar .step .check {
     position: absolute;
     left: 50%;
     top: 70%;
-    font-size: 15px;
+    font-size: 0.75rem;
     transform: translate(-50%, -50%);
     display: none;
-}
-.progress-bar .step .check.active {
+  }
+  
+  .progress-bar .step .check.active {
     display: block;
     color: #fff;
-}
+  }
+  
 
 @media screen and (max-width: 660px) {
     :root {
@@ -251,7 +290,7 @@ form .page .btns button.next {
         position: absolute;
         left: 50%;
         top: 50%;
-        font-size: 15px;
+        font-size: 1rem;
         transform: translate(-50%, -50%);
         display: none;
     }
@@ -261,7 +300,7 @@ form .page .btns button.next {
         justify-content: center;
     }
 }
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
     :root {
         --containerWidth: 100%;
     }

@@ -24,7 +24,7 @@ body{
     background-color: var(--theme-color);
 }
 /* Font */
-h1,h2,h3,h4,h5,h6,p,a,i,label,input,span{
+h1,h2,h3,h4,h5,h6,p,a,i,label,input,span,li{
     color: var(--theme-color);
 }
 i{
@@ -42,7 +42,13 @@ h3{
     margin: 0;
     font-weight: 400;
 }
-
+li{
+    list-style: none;
+    font-size: small;
+}
+ul{
+    padding-left: 0;
+}
 header{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

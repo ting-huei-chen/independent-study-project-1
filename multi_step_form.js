@@ -1,5 +1,6 @@
 
 
+
     const slidePage = document.querySelector(".slide-page");
     const submitBtn = document.querySelector(".submit");
     const progressText = document.querySelectorAll(".step p");
@@ -64,24 +65,28 @@
  */
 function validateInputs(form) {
   // Initialize the inputsValid flag to true.
-  const inputsValid = true;
+  let inputsValid = true;
 
   // Get an array of all input elements within the form.
-  const inputs = [...form.querySelectorAll("input")];
-
+  const inputs = [...form.parentElement.parentElement.querySelectorAll("input")];
+  
   // Iterate over each input element and validate its value.
   for (const input of inputs) {
     // Get the name attribute of the input element.
     const name = input.getAttribute("name");
-
+    
     // Check if the input element is valid.
     const isValid = input.checkValidity();
-
+    
     // If the input element is one of the special inputs (diet, allergies, preference),
-    // check if at least one option has been checked.
+    // check if at least one option has been checked
+    // else validate text field.
     if (name === "diet" || name === "allergies" || name === "preference") {
-      const isChecked = form.querySelector(`input[name="${name}"]:checked`) !== null;
-      inputsValid = inputsValid && isChecked;
+      const isChecked = form.parentElement.parentElement.querySelector(`input[name="${name}"]:checked`) !== null;
+      inputsValid = inputsValid && isChecked;    
+    }else{   
+      const isChecked = form.parentElement.parentElement.querySelector("input").value !== "";
+      inputsValid = inputsValid && isChecked;  
     }
 
     // Toggle the 'invalid-input' class on the input element based on its validity.
